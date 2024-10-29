@@ -1,0 +1,89 @@
+# Lab Task1. make a program where ask user to enter name "admin" and "password" is 12345(numeric) when both are correct it should show you login successful 
+ or Incorrect usernamer or Incorrect password
+Code:
+# Define the correct username and password
+correct_username = "admin"
+correct_password = "12345"
+
+# Prompt user for username and password
+username = input("Enter username: ")
+password = input("Enter password: ")
+
+# Check if the username and password are correct
+if username == correct_username and password == correct_password:
+    print("Login successful")
+elif username != correct_username:
+    print("Incorrect username")
+else:
+    print("Incorrect password")
+
+Output:
+Enter username: admin
+Enter password: 12345
+Login successful
+
+# Lab Task2. Simple ATM Machine
+Prompt the user to enter a PIN (e.g., 1234).
+If the correct PIN is entered, allow the user to check their balance or withdraw money. Otherwise, print "Incorrect PIN."
+Code:
+# Define the correct PIN and initial balance
+correct_pin = "1234"
+balance = 1000  # Example balance
+
+# Prompt the user to enter the PIN
+entered_pin = input("Enter your PIN: ")
+
+# Check if the entered PIN is correct
+if entered_pin == correct_pin:
+    while True:
+        # Display menu options
+        print("\nATM Menu:")
+        print("1. Check Balance")
+        print("2. Withdraw Money")
+        print("3. Exit")
+        
+        choice = input("Please select an option (1-3): ")
+
+        if choice == "1":
+            print(f"Your balance is: ${balance:.2f}")
+        elif choice == "2":
+            withdraw_amount = float(input("Enter amount to withdraw: "))
+            if withdraw_amount <= balance:
+                balance -= withdraw_amount
+                print(f"Please take your cash: ${withdraw_amount:.2f}")
+                print(f"New balance: ${balance:.2f}")
+            else:
+                print("Insufficient funds.")
+        elif choice == "3":
+            print("Thank you for using the ATM. Goodbye!")
+            break
+        else:
+            print("Invalid option. Please try again.")
+else:
+    print("Incorrect PIN.")
+
+Output:
+Enter your PIN: 1234
+
+ATM Menu:
+1. Check Balance
+2. Withdraw Money
+3. Exit
+Please select an option (1-3): 1
+Your balance is: $1000.00
+
+ATM Menu:
+1. Check Balance
+2. Withdraw Money
+3. Exit
+Please select an option (1-3): 2
+Enter amount to withdraw: 3
+Please take your cash: $3.00
+New balance: $997.00
+
+ATM Menu:
+1. Check Balance
+2. Withdraw Money
+3. Exit
+Please select an option (1-3): 3
+Thank you for using the ATM. Goodbye!
