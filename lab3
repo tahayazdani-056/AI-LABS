@@ -1,4 +1,21 @@
-# Lab Task1. make a program where ask user to enter name "admin" and "password" is 12345(numeric) when both are correct it should show you login successful 
+##Write a Python function to check if a number is even or odd.
+code:
+def check_even_odd(number):
+    if number % 2 == 0:
+        return "Even"
+    else:
+        return "Odd"
+
+# Example usage
+num = int(input("Enter a number: "))
+result = check_even_odd(num)
+print(f"The number {num} is {result}.")
+
+Output:
+Enter a number: 2
+The number 2 is Even.
+
+# make a program where ask user to enter name "admin" and "password" is 12345(numeric) when both are correct it should show you login successful 
  or Incorrect usernamer or Incorrect password
 Code:
 # Define the correct username and password
@@ -22,7 +39,7 @@ Enter username: admin
 Enter password: 12345
 Login successful
 
-# Lab Task2. Simple ATM Machine
+ Simple ATM Machine
 Prompt the user to enter a PIN (e.g., 1234).
 If the correct PIN is entered, allow the user to check their balance or withdraw money. Otherwise, print "Incorrect PIN."
 Code:
