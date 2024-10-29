@@ -1,0 +1,59 @@
+01: Make program to see if value is true of false:
+Code:
+def check_boolean(value):
+    if value:
+        return "The value is True."
+    else:
+        return "The value is False."
+
+# Example usage
+value = True  # Change this to any value to test
+print(check_boolean(value))
+02: Make a calculator using the operands in the class:
+Code:
+# Function for addition
+def add(num1, num2):
+    print("Result:", num1 + num2)
+
+# Function for subtraction
+def subtract(num1, num2):
+    print("Result:", num1 - num2)
+
+# Function for multiplication
+def multiply(num1, num2):
+    print("Result:", num1 * num2)
+
+# Function for division
+def divide(num1, num2):
+    print("Result:", "Error! Division by zero." * (num2 == 0) or (num1 / num2))
+
+operations = {
+    "+": add,
+    "-": subtract,
+    "*": multiply,
+    "/": divide
+}
+
+print("Simple Calculator")
+num1_str = input("Enter first number: ")
+num2_str = input("Enter second number: ")
+operation_str = input("Enter operation (+, -, *, /): ")
+
+num1 = float(num1_str)
+num2 = float(num2_str)
+
+operations[operation_str](num1, num2)
+03: Write programs for the different type string “”,’’,””””””:
+Code:
+# Using Double Quotes
+string_double_quotes = " 01: This is a string with double quotes."
+string_with_single_quote = " 02: It's easy to use double quotes when there's an apostrophe."
+
+# Using Single Quotes
+string_single_quotes = '01: This is a string with single quotes.'
+string_with_double_quote = '02: She said, "Hello!" with a smile.'
+
+# Using Triple Quotes
+multi_line_string = """ 01: This is a multi-line string.
+You can write text over multiple lines without any issues.
+It's very helpful for long paragraphs or text blocks."""
