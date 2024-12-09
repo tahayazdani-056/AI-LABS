@@ -1,0 +1,103 @@
+Task 01
+class Car:
+    def __init__(self, make, model, year, mileage):
+        """
+        Initializes the Car class with make, model, year, and mileage.
+        """
+        self.make = make
+        self.model = model
+        self.year = year
+        self.mileage = mileage
+
+    def display_info(self):
+        """
+        Displays the car's information.
+        """
+        print(f"Car Info: {self.year} {self.make} {self.model}, Mileage: {self.mileage} miles")
+
+    def drive(self, miles):
+        """
+        Increases the car's mileage by the specified number of miles.
+        """
+        self.mileage += miles
+        print(f"Car driven for {miles} miles. Total mileage: {self.mileage} miles")
+
+car = Car("Toyota", "Corolla", 2020, 15000)
+car.display_info()
+car.drive(500)
+
+TASK O2
+class Student:
+    def __init__(self, name, age):
+        """
+        Initializes the Student class with name and age. Starts with an empty marks list.
+        """
+        self.name = name
+        self.age = age
+        self.marks = []
+
+    def add_marks(self, marks):
+        """
+        Adds a list of marks to the student's marks list.
+        """
+        self.marks.extend(marks)
+
+    def average_marks(self):
+        """
+        Calculates and returns the average of the student's marks.
+        """
+        if not self.marks:
+            return 0
+        return sum(self.marks) / len(self.marks)
+
+    def display_info(self):
+        """
+        Displays the student's information, including average marks.
+        """
+        avg = self.average_marks()
+        print(f"Student Info: Name: {self.name}, Age: {self.age}, Average Marks: {avg:.2f}")
+
+# Example usage
+student = Student("Alice", 20)
+student.add_marks([85, 90, 78])
+student.display_info()
+
+
+TASK 03
+class BankAccount:
+    def __init__(self, account_holder, balance=0):
+        """
+        Initializes the BankAccount class with the account holder's name and initial balance.
+        """
+        self.account_holder = account_holder
+        self.balance = balance
+
+    def deposit(self, amount):
+        """
+        Deposits an amount into the account.
+        """
+        self.balance += amount
+        print(f"{amount} deposited. New balance: {self.balance}")
+
+    def withdraw(self, amount):
+        """
+        Withdraws an amount from the account if sufficient funds are available.
+        """
+        if amount > self.balance:
+            print("Insufficient funds!")
+        else:
+            self.balance -= amount
+            print(f"{amount} withdrawn. New balance: {self.balance}")
+
+    def display_balance(self):
+        """
+        Displays the current balance of the account.
+        """
+        print(f"Account Holder: {self.account_holder}, Current Balance: {self.balance}")
+
+# Example usage
+account = BankAccount("John Doe", 500)
+account.display_balance()
+account.deposit(200)
+account.withdraw(100)
+account.withdraw(700)
