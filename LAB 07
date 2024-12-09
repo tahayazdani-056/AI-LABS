@@ -1,0 +1,29 @@
+TASK 01
+def draw_square(side_length):
+    """
+    This function draws a square using asterisks (*).
+    The side length of the square is provided by the user.
+    """
+    for _ in range(side_length):
+        print("* " * side_length)
+
+
+TASK 02
+def sum_of_even_numbers(numbers):
+    """
+    This function takes a list of numbers as input and returns the sum of only the even numbers.
+    """
+    return sum(num for num in numbers if num % 2 == 0)
+
+print(sum_of_even_numbers([1, 2, 3, 4, 5, 6]))  # Output: 12
+
+
+TASK 03
+def countdown_to_zero(number):
+    """
+    This function takes a number as input and counts down to zero, printing each number.
+    """
+    for i in range(number, -1, -1):
+        print(i)
+
+countdown_to_zero(5)
