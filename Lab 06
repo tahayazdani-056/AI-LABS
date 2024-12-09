@@ -1,0 +1,27 @@
+TASK 01 : SUM OF DIGITS
+
+def sum_of_digits(number):
+    """
+    This function takes a number as input and returns the sum of its digits.
+    """
+    return sum(int(digit) for digit in str(abs(number)))
+
+print(sum_of_digits(123))  # Output: 6
+
+TASK 02:COUNTS WORDS IN A SENTENCE
+def count_words(sentence):
+    """
+    This function takes a sentence as input and returns the number of words in it.
+    """
+    return len(sentence.split())
+print(count_words("This is a sample sentence."))  # Output: 5
+
+TASK 03:
+def is_even_or_odd(number):
+    """
+    This function takes an integer and returns whether the number is even or odd.
+    """
+    return "Even" if number % 2 == 0 else "Odd"
+
+print(is_even_or_odd(4))  # Output: Even
+print(is_even_or_odd(7))  # Output: Odd
